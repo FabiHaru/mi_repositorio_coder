@@ -1,13 +1,22 @@
 /* INDEX */
-header{
-    display: flex;
-    background-image: linear-gradient(to right, purple, pink);
+.header h1{
+    display: inline-flex;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 10px;
     margin: 10px;
     text-align: right;
     flex-direction: row-reverse;
     justify-content: space-between;
+}
+
+.header{
+    background-image: linear-gradient(to right, purple, pink);
+}
+
+.header img{
+    position: relative;
+    top: 5px;
+    margin: 10px;
 }
 
 a{
