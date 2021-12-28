@@ -1,0 +1,94 @@
+
+$alto: 10px;
+$ancho: 20px;
+$padding: 15px;
+
+.header{
+    background-image: linear-gradient(to right, purple, pink);
+     h1{
+        display: inline-flex;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        text-align: right;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    img{
+        position: relative;
+        top: 5px;
+        margin: 10px;
+    }
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    font-size: large;
+    background-image: linear-gradient(pink,rgb(165, 97, 165));
+    ul{
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+    }
+    li{
+        display: inline-flex;
+        list-style-type: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 5px;
+        background-color: rgb(247, 207, 214);
+    }
+    &:hover{
+        background-color: rgb(250, 162, 177);
+        height: 50px;
+    }
+}
+
+.bienvenida{
+    text-align: justify;
+    padding: 10px;
+    background-image: linear-gradient(to right, purple, pink);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-style: italic;
+    font-size:xx-large;
+}
+
+// Mapa
+
+$social:(
+    twitter: #00acee,
+    instagram: #bc2a8d,
+    email: #4285F4
+);
+
+@each $red, $color in $social {
+    .red-#{$red}{
+        color: $color;
+    }
+}
+
+//Extend
+
+.button{
+    background-color: aqua;
+    padding: 15px 20px;
+}
+
+.button-first{
+    @extend .button;
+}
+
+//Mixin
+@mixin size ($alto, $ancho, $padding) {
+    height: $alto;
+    width: $ancho;
+    padding: $padding;
+}
+
+.consulta{
+    @include size(10px, 5px, 25px)
+}
