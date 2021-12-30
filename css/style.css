@@ -30,8 +30,7 @@
     padding: 5px;
     background-color: #f7cfd6; }
   .navbar:hover {
-    background-color: #faa2b1;
-    height: 50px; }
+    background-color: #faa2b1; }
 
 .bienvenida {
   text-align: justify;
@@ -43,20 +42,59 @@
   font-style: italic;
   font-size: xx-large; }
 
-.red-twitter {
-  color: #00acee; }
+.presentacion, .carrousel, .about, .work, .consultas {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f8c1ca;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  border-style: double;
+  border-color: purple; }
 
-.red-instagram {
-  color: #bc2a8d; }
+.carrousel {
+  background-image: url("../imagenes/background.png"); }
 
-.red-email {
-  color: #4285F4; }
-
-.button, .button-first {
-  background-color: aqua;
-  padding: 15px 20px; }
+h2 {
+  background-image: url("../imagenes/background.png"); }
 
 .consulta {
-  height: 10px;
-  width: 5px;
-  padding: 25px; }
+  width: 300px;
+  height: 500px; }
+
+h3 {
+  display: flex;
+  justify-content: center;
+  background-color: #f8c1ca;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic; }
+
+.gallery-container {
+  padding: 100px;
+  background-image: url("../imagenes/background.png");
+  border-style: double;
+  border-color: purple; }
+
+.img-thumbnail {
+  border-style: double;
+  border-color: purple; }
+
+.foot {
+  background-image: url("../imagenes/background.png");
+  border-style: double;
+  border-color: purple;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold; }
+  .foot ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+  .foot li {
+    list-style-type: none; }
+  .foot:hover {
+    opacity: 0.9; }
+
+.consulta {
+  height: 200px;
+  width: 400px;
+  padding: 15px; }

@@ -1,6 +1,6 @@
 
-$alto: 10px;
-$ancho: 20px;
+$alto: 400px;
+$ancho: 400px;
 $padding: 15px;
 
 .header{
@@ -42,7 +42,6 @@ $padding: 15px;
     }
     &:hover{
         background-color: rgb(250, 162, 177);
-        height: 50px;
     }
 }
 
@@ -57,29 +56,78 @@ $padding: 15px;
     font-size:xx-large;
 }
 
-// Mapa
+.presentacion{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(248, 193, 202);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-style: double;
+    border-color: purple;
+}
 
-$social:(
-    twitter: #00acee,
-    instagram: #bc2a8d,
-    email: #4285F4
-);
+.carrousel{
+    @extend .presentacion;
+    background-image: url("../imagenes/background.png");
+}
 
-@each $red, $color in $social {
-    .red-#{$red}{
-        color: $color;
+.about{
+    @extend .presentacion;
+}
+
+h2{
+    background-image: url("../imagenes/background.png");
+}
+.consulta{
+    width: 300px;
+    height: 500px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(248, 193, 202);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+.gallery-container{
+    padding: 100px;
+    background-image: url("../imagenes/background.png");
+    border-style: double;
+    border-color: purple;
+}
+
+.img-thumbnail{
+    border-style: double;
+    border-color: purple;
+}
+
+.work{
+    @extend .presentacion;
+}
+
+.consultas{
+    @extend .presentacion;
+}
+
+.foot{
+    background-image: url("../imagenes/background.png");
+    border-style: double;
+    border-color: purple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
-}
-
-//Extend
-
-.button{
-    background-color: aqua;
-    padding: 15px 20px;
-}
-
-.button-first{
-    @extend .button;
+    li{
+        list-style-type: none;
+    }
+    &:hover{
+        opacity: 0.9;
+    }
 }
 
 //Mixin
@@ -90,5 +138,5 @@ $social:(
 }
 
 .consulta{
-    @include size(10px, 5px, 25px)
+    @include size(200px, $ancho, $padding)
 }
