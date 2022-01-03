@@ -2,6 +2,7 @@
 $alto: 400px;
 $ancho: 400px;
 $padding: 15px;
+$base-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 .header{
     background-image: linear-gradient(to right, purple, pink);
@@ -140,3 +141,16 @@ h3{
 .consulta{
     @include size(200px, $ancho, $padding)
 }
+
+//Map
+$font:(
+    color: #666,
+  family: (Arial, Helvetica),
+  size: 16px,
+  line-height: 1.4
+)
+
+.body {
+    color: map-get($font, color);
+    font-family: map-get($font, family);
+  }
