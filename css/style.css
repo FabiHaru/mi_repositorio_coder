@@ -42,7 +42,7 @@
   font-style: italic;
   font-size: xx-large; }
 
-.presentacion, .carrousel, .about, .work, .consultas {
+.presentacion, .carrousel, .about, .work {
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -58,10 +58,6 @@
 h2 {
   background-image: url("../imagenes/background.png"); }
 
-.consulta {
-  width: 300px;
-  height: 500px; }
-
 h3 {
   display: flex;
   justify-content: center;
@@ -70,7 +66,7 @@ h3 {
   font-style: italic; }
 
 .gallery-container {
-  padding: 100px;
+  padding: 50px;
   background-image: url("../imagenes/background.png");
   border-style: double;
   border-color: purple; }
@@ -78,6 +74,76 @@ h3 {
 .img-thumbnail {
   border-style: double;
   border-color: purple; }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 6px; }
+
+.form-control {
+  border-color: transparent transparent #f5529e transparent;
+  background: transparent;
+  outline: 0 !important; }
+
+.form-control:focus {
+  border-color: transparent transparent blue transparent;
+  background: transparent;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25); }
+
+.form-control {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; }
+
+.form-control > input[type=text] {
+  border: none;
+  border-bottom: 3px solid red;
+  outline: none; }
+
+.underline-animation {
+  transition: all 1s;
+  display: inline-block;
+  bottom: 0;
+  left: -100%;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f5529e; }
+
+.form-control > input[type=text]:focus + .underline-animation {
+  left: 0; }
+
+.send-button {
+  float: right; }
+
+.send-button .button {
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  background-color: #f5529e;
+  color: white;
+  padding: 11px;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.14286em;
+  transition-duration: 0.4s; }
+
+.send-button .button:hover,
+.form .button:focus,
+.form .button:active {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+
+.send-button .button:active {
+  position: relative;
+  top: 1px;
+  left: 1px; }
 
 .foot {
   background-image: url("../imagenes/background.png");
@@ -98,3 +164,7 @@ h3 {
   height: 200px;
   width: 400px;
   padding: 15px; }
+
+.body {
+  color: #666;
+  font-family: Arial, Helvetica; }
